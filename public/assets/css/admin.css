@@ -1,0 +1,38 @@
+.main-menu {
+    padding: 1rem;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 0.5rem;
+  }
+  
+  .main-menu h1 span {
+    color: white;
+    background-color: black;
+  }
+  
+  .main-menu ul {
+    list-style: none;
+    align-self: flex-end;
+  }
+  
+  .main-menu ul li {
+    display: inline-block;
+    margin: 0.2rem 0.1rem;
+  }
+  
+  footer {
+    text-align: center;
+    padding-top: 0rem;
+    border-top: 2px solid #ddd;
+  }
+  
+  /* Forms */
+  
+  .create-form .form-group label {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 0.1rem;
+  }
+  
