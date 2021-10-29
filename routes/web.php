@@ -24,16 +24,15 @@ Route::get('/about', function () {
 
 Route::get('/blog', function () {
     return view('blog');
-})->name('blog');;
-
-
+})->name('blog');
 
 Route::get('/admin/create', function () {
     return view('admin.create');
 })->name('admin.create');
 
+Route::get('/admin', [AdminController::class, 'welcome'])->name('admin.welcome');
 
-Route::get('/admin', [AdminController::class, 'welcome'])->name('admin.welcone');
 Route::post('/admin/create', [AdminController::class, 'create'])->name('admin.create.post');
 
+Route::delete('/admin/{postId}', [AdminController::class, 'delete']);
 

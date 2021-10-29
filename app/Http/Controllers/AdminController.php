@@ -38,4 +38,11 @@ class AdminController extends Controller
 
         return view('admin.welcome', ['posts' => $posts]);
     }
+
+    public function delete($postId) {
+        $post = Post::findOrFail($postId);
+        // dd($postId);
+        $post->delete();
+        return redirect()->back()->with('status', 'post deleted successfully');
+    }
 }
