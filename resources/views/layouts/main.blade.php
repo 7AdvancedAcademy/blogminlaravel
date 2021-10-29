@@ -66,9 +66,9 @@ https://templatemo.com/tm-551-stand-blog
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('blog') }}">Blog Entries</a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link" href="{{ route('article', 'example-blog-post-slug') }}">Post Details</a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('contact') }}">Contact Us</a>
                         </li>

@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <li><a href="{{ url('/admin/create') }}">Create Post</a></li>
             <li><a href="/admin/posts.php">View Posts</a></li>
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                <button type="submit">logout</button>
+                <button><a href="{{ route('welcome') }}">logout</a></button>
             </form>
 
         </ul>

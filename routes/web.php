@@ -29,11 +29,17 @@ Route::get('/blog', function () {
 
 
 Route::get('/admin/create', function () {
-    return view('admin.create');
-})->name('admin.create');
+    return view('admin.create')->middleware('auth');
+})->name('admin.create')->middleware('auth');
+
+Route::get('/admin', [AdminController::class, 'welcome'])->name('admin.welcone')->middleware('auth');
+Route::post('/admin/create', [AdminController::class, 'create'])->name('admin.create.post')->middleware('auth');
 
 
-Route::get('/admin', [AdminController::class, 'welcome'])->name('admin.welcone');
-Route::post('/admin/create', [AdminController::class, 'create'])->name('admin.create.post');
 
+Auth::routes(
 
+    
+);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
