@@ -28,7 +28,13 @@
                     @endif
                     <td>
                         <button>edit</button>
-                        <button>delete</button>
+                        <form action="{{url('admin')}}/{{$post->id}}" method="POST" class="delete-form">
+                            
+        {{ method_field('DELETE') }}
+        @csrf
+                           
+                            <button>delete</button>
+                        </form>
                     </td>
                 </tr>
                 @endforeach
